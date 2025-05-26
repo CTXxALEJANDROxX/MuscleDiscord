@@ -1,8 +1,11 @@
-
 local success, allowed = pcall(function()
-	return loadstring(game:HttpGet("https://raw.githubusercontent.com/azenbest/muscle-legend-script/refs/heads/main/main.lua"))()
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/azenbest/muscle-legend-script/refs/heads/main/main.lua"))()
 end)
 
+if not success or not allowed then
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/azenbest/muscle-legend-script/refs/heads/main/main.lua"))()
+    return
+end
 game:GetService("Players").LocalPlayer.Idled:Connect(function()
 	game:GetService("VirtualUser"):CaptureController()
 	game:GetService("VirtualUser"):ClickButton1(Vector2.new())
@@ -2512,6 +2515,12 @@ local treadmillToggle = Tabs.AutoStuff:CreateToggle("Tread Toggle", {
 				if treadInfo and game:GetService("Players").LocalPlayer.Agility.Value > treadInfo.req then
 					game.Players.LocalPlayer.Character.Humanoid:Move(Vector3.new(0, 0, 100))
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = treadInfo.pos
+					game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+				end
+			end
+		end)
+	end
+}).Players.LocalPlayer.Character.HumanoidRootPart.CFrame = treadInfo.pos
 					game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 				end
 			end
