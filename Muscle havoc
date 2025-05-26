@@ -1235,28 +1235,28 @@ local muscleKingTimeGained = 0
 local lastMuscleKingTimeValue = nil
 
 local TimerParagraph = Tabs.Stats:CreateParagraph("SessionTimer", {
-	Title = "â±ï¸ Session Time",
+	Title = "⏱️ Session Time",
 	Content = "0d 0h 0m 0s",
 	TitleAlignment = "Left",
 	ContentAlignment = Enum.TextXAlignment.Left
 })
 
 local CustomTimerParagraph = Tabs.Stats:CreateParagraph("CustomTimer", {
-	Title = "â±ï¸ Custom Timer",
+	Title = "⏱️ Custom Timer",
 	Content = "Timer not started",
 	TitleAlignment = "Left",
 	ContentAlignment = Enum.TextXAlignment.Left
 })
 
 local LeaderParagraph = Tabs.Stats:CreateParagraph("LeaderStats", {
-	Title = "ðŸ“Š Leaderboard Stats",
+	Title = "📊 Leaderboard Stats",
 	Content = "Loading stats...",
 	TitleAlignment = "Left",
 	ContentAlignment = Enum.TextXAlignment.Left
 })
 
 local IntParagraph = Tabs.Stats:CreateParagraph("IntStats", {
-	Title = "ðŸ’ª Player Stats",
+	Title = "💪 Player Stats",
 	Content = "Loading stats...",
 	TitleAlignment = "Left",
 	ContentAlignment = Enum.TextXAlignment.Left
@@ -1578,7 +1578,7 @@ Tabs.Stats:CreateButton{
 		if foundPlayer then
 			local content = string.format("Strength: %s\nRebirths: %s\nKills: %s\nBrawls: %s\nGood Karma: %s\nEvil Karma: %s\nDurability: %s\nAgility: %s", formatNumber(foundPlayer.leaderstats.Strength.Value), formatNumber(foundPlayer.leaderstats.Rebirths.Value), formatNumber(foundPlayer.leaderstats.Kills.Value), formatNumber(foundPlayer.leaderstats.Brawls.Value), formatNumber(foundPlayer.goodKarma.Value), formatNumber(foundPlayer.evilKarma.Value), formatNumber(foundPlayer.Durability.Value), formatNumber(foundPlayer.Agility.Value))
 			TrackingParagraph:SetContent(content)
-			TrackingParagraph:SetTitle("ðŸ“Š Tracking: " .. foundPlayer.Name)
+			TrackingParagraph:SetTitle("📊 Tracking: " .. foundPlayer.Name)
 		end
 	end
 }
